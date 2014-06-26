@@ -13,6 +13,9 @@
 		8F858225195BEF19004513AE /* YYSpinkitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F858224195BEF19004513AE /* YYSpinkitView.swift */; };
 		8F858229195BF0E8004513AE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F858228195BF0E8004513AE /* QuartzCore.framework */; };
 		8F85822B195BFF32004513AE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F85822A195BFF32004513AE /* MainViewController.swift */; };
+		8F85822F195C0874004513AE /* icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85822C195C0874004513AE /* icon_120.png */; };
+		8F858230195C0874004513AE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85822D195C0874004513AE /* icon.png */; };
+		8F858231195C0874004513AE /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85822E195C0874004513AE /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		8F858224195BEF19004513AE /* YYSpinkitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSpinkitView.swift; sourceTree = "<group>"; };
 		8F858228195BF0E8004513AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8F85822A195BFF32004513AE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8F85822C195C0874004513AE /* icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120.png; sourceTree = "<group>"; };
+		8F85822D195C0874004513AE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		8F85822E195C0874004513AE /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,9 @@
 		8F858209195BEEC9004513AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8F85822C195C0874004513AE /* icon_120.png */,
+				8F85822D195C0874004513AE /* icon.png */,
+				8F85822E195C0874004513AE /* icon@2x.png */,
 				8F85820A195BEEC9004513AE /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -200,7 +209,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F85822F195C0874004513AE /* icon_120.png in Resources */,
+				8F858231195C0874004513AE /* icon@2x.png in Resources */,
 				8F85820E195BEECA004513AE /* Images.xcassets in Resources */,
+				8F858230195C0874004513AE /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
