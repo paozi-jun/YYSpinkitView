@@ -2,7 +2,7 @@
 
 import UIKit
 import QuartzCore
-enum RTSpinKitViewStyle {
+enum YYSpinKitViewStyle {
     case Plane
     case Bounce
     case Wave
@@ -10,7 +10,7 @@ enum RTSpinKitViewStyle {
     case Pulse
 }
 
-let kRTSpinKitDegToRad:Float = 0.0174532925
+let kYYSpinKitDegToRad:Float = 0.0174532925
 
 class YYSpinkitView: UIView {
 
@@ -18,10 +18,10 @@ class YYSpinkitView: UIView {
     var color:UIColor?{
     set{
         self._color = newValue
-        for l:AnyObject in self.layer.sublayers {
-            var layer = l as CALayer
-            layer.backgroundColor = self._color!.CGColor
-        }
+//        for l:AnyObject in self.layer.sublayers {
+//            var layer = l as CALayer
+//            layer.backgroundColor = self._color!.CGColor
+//        }
     }
     get{
         return self._color
@@ -29,7 +29,7 @@ class YYSpinkitView: UIView {
     }
     var hidesWhenStopped:Bool?
     
-    var style:RTSpinKitViewStyle?
+    var style:YYSpinKitViewStyle?
     
     var stopped:Bool?
     
@@ -38,7 +38,7 @@ class YYSpinkitView: UIView {
         // Initialization code
     }
 
-    init(style:RTSpinKitViewStyle){
+    init(style:YYSpinKitViewStyle){
         super.init(frame: CGRectZero)
     }
     
@@ -48,7 +48,7 @@ class YYSpinkitView: UIView {
         return CATransform3DRotate(transform, Float(angle), x, y, z)
     }
     
-    init(style:RTSpinKitViewStyle,color:UIColor){
+    init(style:YYSpinKitViewStyle,color:UIColor){
         super.init(frame: CGRectZero)
         self.style = style
         self.color = color
@@ -60,7 +60,7 @@ class YYSpinkitView: UIView {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationDidEnterBackground", name: UIApplicationDidEnterBackgroundNotification, object: nil)
         
         
-        if self.style == RTSpinKitViewStyle.Plane {
+        if self.style == YYSpinKitViewStyle.Plane {
             var plane = CALayer()
             plane.frame = CGRectInset(self.bounds, 2.0, 2.0)
             plane.backgroundColor = color.CGColor
@@ -90,7 +90,7 @@ class YYSpinkitView: UIView {
             
             plane.addAnimation(anim,forKey:"spinkit-anim")
         }
-        else if self.style == RTSpinKitViewStyle.Bounce {
+        else if self.style == YYSpinKitViewStyle.Bounce {
             var beginTime = CACurrentMediaTime()
             
             for  var i:Int = 0; i < 2; i+=1 {
@@ -124,7 +124,7 @@ class YYSpinkitView: UIView {
                 circle.addAnimation(anim,forKey:"spinkit-anim")
             }
         }
-        else if style == RTSpinKitViewStyle.Wave {
+        else if style == YYSpinKitViewStyle.Wave {
             var beginTime = CACurrentMediaTime() + 1.2
             var barWidth = CGRectGetWidth(self.bounds) / 5.0
             
@@ -159,7 +159,7 @@ class YYSpinkitView: UIView {
                 layer.addAnimation(anim,forKey:"spinkit-anim")
             }
         }
-        else if style == RTSpinKitViewStyle.WanderingCubes {
+        else if style == YYSpinKitViewStyle.WanderingCubes {
             var beginTime = CACurrentMediaTime()
             var cubeSize = floor(CDouble(CGRectGetWidth(self.bounds) / 3.0))
             var widthMinusCubeSize = CGRectGetWidth(self.bounds) - Float(cubeSize)
@@ -193,19 +193,19 @@ class YYSpinkitView: UIView {
                 var t0 = CATransform3DIdentity
                 
                 var t1 = CATransform3DMakeTranslation(widthMinusCubeSize, 0.0, 0.0)
-                t1 = CATransform3DRotate(t1, -90.0 * kRTSpinKitDegToRad, 0.0, 0.0, 1.0)
+                t1 = CATransform3DRotate(t1, -90.0 * kYYSpinKitDegToRad, 0.0, 0.0, 1.0)
                 t1 = CATransform3DScale(t1, 0.5, 0.5, 1.0)
                 
                 var t2 = CATransform3DMakeTranslation(widthMinusCubeSize, widthMinusCubeSize, 0.0)
-                t2 = CATransform3DRotate(t2, -180.0 * kRTSpinKitDegToRad, 0.0, 0.0, 1.0)
+                t2 = CATransform3DRotate(t2, -180.0 * kYYSpinKitDegToRad, 0.0, 0.0, 1.0)
                 t2 = CATransform3DScale(t2, 1.0, 1.0, 1.0)
                 
                 var t3 = CATransform3DMakeTranslation(0.0, widthMinusCubeSize, 0.0)
-                t3 = CATransform3DRotate(t3, -270.0 * kRTSpinKitDegToRad, 0.0, 0.0, 1.0)
+                t3 = CATransform3DRotate(t3, -270.0 * kYYSpinKitDegToRad, 0.0, 0.0, 1.0)
                 t3 = CATransform3DScale(t3, 0.5, 0.5, 1.0)
                 
                 var t4 = CATransform3DMakeTranslation(0.0, 0.0, 0.0)
-                t4 = CATransform3DRotate(t4, -360.0 * kRTSpinKitDegToRad, 0.0, 0.0, 1.0)
+                t4 = CATransform3DRotate(t4, -360.0 * kYYSpinKitDegToRad, 0.0, 0.0, 1.0)
                 t4 = CATransform3DScale(t4, 1.0, 1.0, 1.0)
                 
                 
@@ -218,7 +218,7 @@ class YYSpinkitView: UIView {
                 cube.addAnimation(anim,forKey:"spinkit-anim")
             }
         }
-        else if style == RTSpinKitViewStyle.Pulse {
+        else if style == YYSpinKitViewStyle.Pulse {
             var beginTime = CACurrentMediaTime()
             
             var circle = CALayer()

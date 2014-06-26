@@ -12,6 +12,7 @@
 		8F85821A195BEECA004513AE /* YYSpinkitViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F858219195BEECA004513AE /* YYSpinkitViewTests.swift */; };
 		8F858225195BEF19004513AE /* YYSpinkitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F858224195BEF19004513AE /* YYSpinkitView.swift */; };
 		8F858229195BF0E8004513AE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F858228195BF0E8004513AE /* QuartzCore.framework */; };
+		8F85822B195BFF32004513AE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F85822A195BFF32004513AE /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		8F858219195BEECA004513AE /* YYSpinkitViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYSpinkitViewTests.swift; sourceTree = "<group>"; };
 		8F858224195BEF19004513AE /* YYSpinkitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSpinkitView.swift; sourceTree = "<group>"; };
 		8F858228195BF0E8004513AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8F85822A195BFF32004513AE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				8F858223195BEEEC004513AE /* class */,
 				8F85820B195BEEC9004513AE /* AppDelegate.swift */,
+				8F85822A195BFF32004513AE /* MainViewController.swift */,
 				8F85820D195BEECA004513AE /* Images.xcassets */,
 				8F858209195BEEC9004513AE /* Supporting Files */,
 			);
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F85822B195BFF32004513AE /* MainViewController.swift in Sources */,
 				8F85820C195BEEC9004513AE /* AppDelegate.swift in Sources */,
 				8F858225195BEF19004513AE /* YYSpinkitView.swift in Sources */,
 			);
